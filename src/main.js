@@ -43,4 +43,4 @@ for (let i = 0; i < EXTRA_COUNT; i++) {
 
 const footerElement = document.querySelector('.footer');
 
-// render(footerElement, createPopupTemplate(), 'afterend');
+render(footerElement, createPopupTemplate(), 'afterend');
