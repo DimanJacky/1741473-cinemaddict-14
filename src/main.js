@@ -1,8 +1,8 @@
 import {createSiteMenuTemplate} from './view/site-menu.js';
 import {createFilmCardTemplate} from './view/film-card.js';
 import {createHeaderProfileTemplate} from './view/header-profile';
+import {createFilmsTemplate} from './view/films';
 import {createShowMoreButtonTemplate} from './view/show-more';
-import {createPopupTemplate} from './view/popup';
 import {createFilmsListTemplate} from './view/films-list';
 import {createFooterTemplate} from './view/footer';
 
@@ -21,7 +21,7 @@ const siteHeaderElement = document.querySelector('.header');
 
 render(siteHeaderElement, createHeaderProfileTemplate(), 'beforeend');
 
-render(siteMainElement, '<section class="films"></section>', 'beforeend');
+render(siteMainElement, createFilmsTemplate(), 'beforeend');
 
 const filmsMainElement = document.querySelector('.films');
 
@@ -54,5 +54,3 @@ for (let i = 0; i < EXTRA_COUNT; i++) {
 }
 
 render(siteMainElement, createFooterTemplate('Cinemaddict', '130 291 movies inside'), 'afterend');
-
-// render(footerElement, createPopupTemplate(), 'afterend');
