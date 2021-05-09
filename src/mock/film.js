@@ -76,7 +76,7 @@ const countries = [
   'Russia',
   'England',
   'France',
-  'Finland'
+  'Finland',
 ];
 
 const genres = [
