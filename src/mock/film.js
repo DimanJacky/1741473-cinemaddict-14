@@ -3,9 +3,9 @@ import {
   generateValue,
   getRandomInteger,
   getRandomNumber,
-  minutesToHm,
-  generateUniquesNumbers
+  minutesToHm
 } from '../utils';
+import {generateComments} from './comments';
 
 const posters = [
   'made-for-each-other.png',
@@ -88,42 +88,9 @@ const genres = [
   'Fantasy',
 ];
 
-const comments = [
-  'a film that changed my life, a true masterpiece, post-credit scene was just amazing omg.',
-  'Interesting setting and a good cast',
-  'Booooooooooring',
-  'Very good film',
-  'Almost two hours? Seriously?',
-];
-
-const commentAuthors = [
-  'Tim Macoveev',
-  'Ilya Oreilly',
-  'John Johnson',
-];
-
-const emotions = [
-  'smile',
-  'sleeping',
-  'puke',
-  'angry',
-];
-
 const ages = [0, 6, 12, 14, 16, 18];
 
 const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget. Fusce tristique felis at fermentum pharetra. Aliquam id orci ut lectus varius viverra. Nullam nunc ex, convallis sed finibus eget, sollicitudin eget ante. Phasellus eros mauris, condimentum sed nibh vitae, sodales efficitur ipsum. Sed blandit, eros vel aliquam faucibus, purus ex euismod diam, eu luctus nunc ante ut dui. Sed sed nisi sed augue convallis suscipit in sed felis. Aliquam erat volutpat. Nunc fermentum tortor ac porta dapibus. In rutrum ac purus sit amet tempus.';
-
-const generateComments = () => {
-  const countComments = getRandomInteger(0, 5);
-  const ids = generateUniquesNumbers(countComments, 100);
-  return  ids.map((id) => ({
-    id: id,
-    author: generateValue(commentAuthors),
-    comment: generateValue(comments),
-    date: generateDate(10),
-    emotion: generateValue(emotions),
-  }));
-};
 
 const generateDesctiption = (description) => {
   const descriptionArr = description.split('.');
