@@ -29,7 +29,6 @@ const render = (container, template, place) => { // Функция render
 const siteHeaderElement = document.querySelector('.header');
 const siteMainElement = document.querySelector('.main');
 
-console.log('countViewedFilms', countViewedFilms);
 render(siteHeaderElement, createHeaderProfileTemplate(countViewedFilms), 'beforeend'); // Создание названия пользователя в шапке
 render(siteMainElement, createFilterTemplate(countWatchlist, countHistory, countFavorites), 'afterbegin');
 render(siteMainElement, createSortTemplate(FILMS_COUNT), 'beforeend');
